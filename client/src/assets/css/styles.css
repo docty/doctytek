@@ -1,0 +1,142 @@
+p, h1, h2, h3, h4, h5, h6 {
+  font-family:'ABeeZee';
+}
+
+.heading {
+  background:linear-gradient(#55ad62, #88d78f);
+  padding:8px;
+}
+
+.logo {
+  display:flex;
+  justify-content:center;
+}
+
+.carder-1 {
+  border:4px solid #f1f1f1;
+  border-radius:10px;
+  background-size:cover;
+  background-repeat:repeat-x;
+  background-position:bottom;
+  background:linear-gradient(#f1f1f1, #f1f1f1);
+  padding:8px;
+  box-shadow:0px 1px 8px 2px #204a45;
+  margin:20px 0px;
+}
+
+.col {
+  padding-top:12px;
+  padding-bottom:12px;
+}
+
+@media (min-width: 992px) {
+  .col {
+    padding:12px 120px;
+  }
+}
+
+.carder-activity {
+  box-shadow:1px 1px 1px 1px;
+  background:linear-gradient(#edf7ed, #b5c1b5);
+  padding:15px;
+}
+
+.activity-link {
+  color:black;
+}
+
+.activity-link:hover {
+  text-decoration:none;
+  color:#47605d;
+}
+
+.carder-most-view {
+  box-shadow:1px 1px 1px 1px;
+  background:linear-gradient(#edfbf2, #e9ebea);
+}
+
+@media (min-width: 576px) {
+  .block {
+    display:flex;
+  }
+}
+
+.panel-container {
+  padding:0px 20px 20px;
+}
+
+@media (min-width: 768px) {
+  .left-sub-container, .right-sub-container {
+    display:flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .left-sub-container div, .right-sub-container div {
+    margin:20px 9px;
+  }
+}
+
+.section-container div {
+  margin:20px 0px;
+}
+
+@media (min-width: 768px) {
+  .section-container > div {
+    padding:5px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    display:flex;
+  }
+}
+
+.section-footer {
+  background-color:#343434;
+  color:rgb(229,232,235);
+}
+
+@media (min-width: 768px) {
+  .section-footer {
+    display:flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-block-section > div {
+    width:30%;
+    margin:20px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-block-section {
+    display:flex;
+    flex-wrap:wrap;
+  }
+}
+
+.nav-item-active {
+  background-color:#383a3e;
+  border:2px solid #616365;
+  font-size:19px;
+  color:#ffffff;
+}
+
+.container.content-container {
+  background-color:#fbfcfa;
+  margin-top:12px;
+  padding:14px 0px;
+}
+
+@media (min-width: 992px) {
+  .container.content-container {
+    background-color:#fbfcfa;
+    margin-top:21px;
+    padding:15px 0px;
+    width:78%;
+  }
+}
+
