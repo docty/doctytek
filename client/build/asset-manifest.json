@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4089daa7.chunk.css",
+    "main.js": "/static/js/main.243982b6.chunk.js",
+    "main.js.map": "/static/js/main.243982b6.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.517adafb.chunk.js": "/static/js/2.517adafb.chunk.js",
+    "static/js/2.517adafb.chunk.js.map": "/static/js/2.517adafb.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.38e3896b12e4c00f55b2d5f28485cfa7.js": "/precache-manifest.38e3896b12e4c00f55b2d5f28485cfa7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4089daa7.chunk.css.map": "/static/css/main.4089daa7.chunk.css.map",
+    "static/media/laravel.png": "/static/media/laravel.78122e06.png",
+    "static/media/mysql.png": "/static/media/mysql.6d5a1a24.png",
+    "static/media/php.png": "/static/media/php.574195b0.png",
+    "static/media/react.png": "/static/media/react.9dc296dd.png",
+    "static/media/unity3d.png": "/static/media/unity3d.20501992.png"
+  }
+}
