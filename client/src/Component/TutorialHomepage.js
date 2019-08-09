@@ -24,7 +24,7 @@ class TutorialHomepage extends Component {
         let url = this.props.match.params.url;
 
 
-        axios.get('http://localhost:2000/api/task?q='+url)
+        axios.get('http://localhost:8000/api/task/show?q='+url)
           .then(response => {
               this.setState({
                   data : response.data
@@ -46,7 +46,7 @@ class TutorialHomepage extends Component {
                                         <a href={'/'+item.category+'/'+item.url} className="activity-link">
                                         <img src={logo} alt="no logo"/>
                                         <h4>{item.title}</h4>
-                                        <p>{item.created_at.split('T')[0]}</p>
+                                        <p>{item.createdAt.split('T')[0]}</p>
                                         <p>{item.description}
                                         </p>
                                         </a>

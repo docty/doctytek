@@ -23,7 +23,7 @@ class Task extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://localhost:2000/app')
+        axios.get('http://localhost:8000/api/task')
           .then( response => {
              this.setState({
                  data : response.data
@@ -48,7 +48,7 @@ class Task extends Component {
                                         <a href={'/'+item.category+'/'+item.url} className="activity-link">
                                             <h5>{item.title}</h5>
                                             <p>{item.description}</p>
-                                            <p className="text-right">{item.created_at.split('T')[0]}</p>
+                                            <p className="text-right">{item.createdAt.split('T')[0]}</p>
                                         </a>
                                     </div>
                                 );

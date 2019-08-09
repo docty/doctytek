@@ -1,12 +1,13 @@
-const express = require('express');
-const path = require('path');
-const mysql = require('mysql');
+import express from 'express';
+import path  from 'path';
+const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 
-
-
+import Tasks from './app/controller/task';
+import Feedbacks from './app/controller/feedback';
 
 
 const app = express();
@@ -15,51 +16,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const port = process.env.PORT || 2000;
+const port = process.env.APP_PORT || 2000;
 
-
-var conn = mysql.createConnection({
-  host  : 'localhost',
-  user : 'root',
-  password : '',
-  database : 'nodedatabase'
-});
-
-conn.connect(function(err) {
-  if(err)
-  return  console.log(err);
-
-  return console.log("Database Connected Successfully");
-});
-
-
-app.get('/app', (req, res) => {
-  let sql = "SELECT * FROM task ORDER BY created_at DESC LIMIT 3";
-  conn.query(sql, function(err, result, field){
-    res.send(result);
-  });
-
-});
-
-
-app.get('/api/task', (req, res) => {
-  let query = req.query.q
-
-  conn.query('SELECT * FROM task WHERE category = ?', [query], function(err, result, field){
-    res.send(result);
-
-  });
-});
-
-
-app.post('/api/feedback', (req, res) => {
-  conn.query('INSERT INTO feedback (name, email, message) VALUES (?, ?, ?)', [req.body.name, req.body.email, req.body.message], function(err, result, field){
-
-  });
-   res.send("Inserted Successfully");
-});
-
-
+ app.get('/api/task', Tasks.index);
+ app.get('/api/task/show', Tasks.show);
+ app.post('/api/feedback', Feedbacks.create);
 
 
 app.get('/*', (req, res) => {
@@ -68,10 +29,6 @@ app.get('/*', (req, res) => {
 });
 
 
-
-
-
-
 app.listen(port, function () {
-  console.log(`Server Starts on ${port}`);
+  console.log(`Server Starts on http://localhost:${port}`);
 });
