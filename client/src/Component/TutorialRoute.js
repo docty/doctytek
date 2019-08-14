@@ -1,5 +1,6 @@
 import React from 'react'
 import LaravelRoute from "./TutorialRoute/LaravelRoute";
+import ReactJsRoute from "./TutorialRoute/ReactJsRoute";
 
 
 
@@ -32,6 +33,8 @@ class TutorialRoute extends React.Component {
     switch (this.state.subroute) {
       case 'laravel':
             return <LaravelRoute url = {this.state.url} />
+      case 'reactjs':
+            return <ReactJsRoute url = {this.state.url}/>
       default:
           return <div>Page Not Found</div>
 
