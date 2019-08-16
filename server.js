@@ -1,4 +1,6 @@
 const  express = require('express');
+const  path = require('path');
+
 //import express from 'express';
 // import path from 'path';
 // import mysql from 'mysql2';
@@ -12,7 +14,7 @@ const  express = require('express');
 
 
 const app = express();
-// app.use(express.static(path.join(__dirname , '../client/build')));
+app.use(express.static(path.join(__dirname , './client/build')));
 // app.use(cors());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: true}));
@@ -27,8 +29,8 @@ const port = process.env.PORT || 2000;
 
 
 app.get('/*', (req, res) => {
-    res.send('welcome');
-    //res.sendFile(path.join(__dirname, '../client/build/index.html'));
+
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
 
