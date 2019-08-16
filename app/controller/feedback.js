@@ -21,5 +21,5 @@ class Feedbacks {
         }
 }
 
-//export default Feedbacks
+//export default Feedbacks will
 module.exports = Feedbacks;
