@@ -15,10 +15,10 @@ module.exports = {
         type: Sequelize.TEXT
       },
       category: {
-        type: Sequelize.CHAR
+        type: Sequelize.STRING
       },
       url: {
-        type: Sequelize.CHAR
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

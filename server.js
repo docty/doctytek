@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
-
+const Sequelize = require('sequelize');
 
 import Tasks from './app/controller/task';
 import Feedbacks from './app/controller/feedback';
@@ -17,6 +17,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 const port = process.env.APP_PORT || 2000;
+console.log(process.env.DATABASE_URL);
+
 
  app.get('/api/task', Tasks.index);
  app.get('/api/task/show', Tasks.show);

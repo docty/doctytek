@@ -3,8 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   const Task = sequelize.define('Task', {
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
-    category: DataTypes.CHAR,
-    url: DataTypes.CHAR
+    category: DataTypes.STRING,
+    url: DataTypes.STRING
   }, {});
   Task.associate = function(models) {
     // associations can be defined here
