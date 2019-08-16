@@ -1,5 +1,7 @@
 const  express = require('express');
 const  path = require('path');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 //import express from 'express';
 // import path from 'path';
@@ -9,21 +11,21 @@ const  path = require('path');
  require('dotenv').config();
 //
 //
-// import Tasks from '../app/controller/task';
+const  Tasks = require('./app/controller/task');
 // import Feedbacks from '../app/controller/feedback';
 
 
 const app = express();
 app.use(express.static(path.join(__dirname , './client/build')));
-// app.use(cors());
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 const port = process.env.PORT || 2000;
 
 
-//
-// app.get('/api/task', Tasks.index);
+
+ app.get('/api/task', Tasks.index);
 // app.get('/api/task/show', Tasks.show);
 // app.post('/api/feedback', Feedbacks.create);
 
