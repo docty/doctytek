@@ -1,5 +1,6 @@
 
 require('dotenv').config(); // postgresql-octagonal-85731
+var database_url = process.env.DATABASE_URL;
 module.exports = {
 "development": {
     "username": process.env.DB_USERNAME,
@@ -16,10 +17,11 @@ module.exports = {
     "dialect": "mysql"
 },
 "production": {
-    "username": "root",
-    "password": null,
-    "database": process.env.DATABASE_URL,
-    "host": process.env.DATABASE_URL,
+    "username": database_url['user'],
+    "password": database_url['pass'],
+    "database": database_url['path'],
+    "host": database_url['host'],
+    "port" : database_url['port'],
     "dialect": "postgres"
 }
 };
