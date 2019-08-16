@@ -6,8 +6,10 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 
-import Tasks from './app/controller/task';
-import Feedbacks from './app/controller/feedback';
+//import Tasks from './app/controller/task';
+const Tasks = require('./app/controller/task');
+const Feedbacks = require('./app/controller/feedback');
+//import Feedbacks from './app/controller/feedback';
 
 
 const app = express();

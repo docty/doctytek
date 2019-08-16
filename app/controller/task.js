@@ -27,4 +27,5 @@ class Tasks {
         }
 }
 
-export default Tasks
+//export default Tasks
+module.exports = Tasks;
