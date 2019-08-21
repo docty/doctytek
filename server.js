@@ -9,14 +9,14 @@ const bodyParser = require('body-parser');
 // import cors from 'cors';
 // import bodyParser from 'body-parser';
  require('dotenv').config();
-//
-//
-//const  Tasks = require('./app/controller/task');
+
+const  Tasks = require('./app/controller/task');
+const  Feedbacks = require('./app/controller/feedback');
 // import Feedbacks from '../app/controller/feedback';
 
 
 const app = express();
-//app.use(express.static(path.join(__dirname , './client/build')));
+app.use(express.static(path.join(__dirname , './client/build')));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -25,9 +25,9 @@ const port = process.env.PORT || 2000;
 
 
 
- //app.get('/api/task', Tasks.index);
-// app.get('/api/task/show', Tasks.show);
-// app.post('/api/feedback', Feedbacks.create);
+ app.get('/api/task', Tasks.index);
+ app.get('/api/task/show', Tasks.show);
+ app.post('/api/feedback', Feedbacks.create);
 
 
 app.get('/*', (req, res) => {
